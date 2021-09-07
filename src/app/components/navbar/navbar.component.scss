@@ -1,0 +1,43 @@
+.main-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 15px 0;
+  background: linear-gradient(180deg, #7cd7d5 50%, #dfacdb 50%);
+  .logo-container{
+    max-width: 100px;
+    .logo{
+      width: 100%;
+    }
+  }
+  .left-links, .right-links{
+    padding-top: 8px;
+    .menu-item{
+      font-family: 'Josefin Sans', sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 800;
+      font-size: 32px;
+      text-decoration: none;
+      margin: 0 50px;
+      text-shadow: 1px 1px 4px #000;
+      transition: all .2s ease;
+      &:hover{
+        color: #fffaaa;
+        transition: all .2s ease;
+      }
+    }
+  }
+
+  .left-links{
+
+  }
+  .right-links{
+
+  }
+}
