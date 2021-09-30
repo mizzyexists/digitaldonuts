@@ -1,13 +1,47 @@
-<div class="main-nav">
-  <div class="left-links">
-    <a class="menu-item" href="#">Home</a>
-    <a class="menu-item" href="#">About</a>
-  </div>
-  <div class="logo-container">
-    <a href="#"><img class="logo" src="../../assets/Vinellachoceth.png"></a>
-  </div>
-  <div class="right-links">
-    <a class="menu-item" href="#">Mint</a>
-    <a class="menu-item" href="#">Perks</a>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col navigation">
+      <a class="pl-2" href="/">
+        <img class="nav-logo" src="../assets/images/DD_V1.png">
+      </a>
+      <a class="nav-toggle {{menuClass}}" href="#" (click)="toggleMenu()">
+        <img src="../assets/images/PinkDonutItem.png">
+        <p class="menu-label">Menu</p>
+      </a>
+      <div class="nav-menu {{menuClass}}">
+        <ul>
+          <li class="nav-item">
+            <a href="#">
+              <p>About</p>
+              <img src="../assets/images/BlueOHTrans.png">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <p>Roadmap</p>
+              <img src="../assets/images/YellowOHTrans.png">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <p>Mint</p>
+              <img src="../assets/images/WavyOHTrans.png">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <p>Charity</p>
+              <img src="../assets/images/SkyOHTrans.png">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <p>Connect Wallet</p>
+              <img src="../assets/images/PurpleOHTrans.png">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
