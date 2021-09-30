@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   tiltSettings = {
     scale: 1.1,
+    reverse: true,
     speed: 8000,
     max: 35,
-    perspective: 600,
+    perspective: 800,
     transition: true,
-    "full-page-listening": true,
-    "mouse-event-element": '#main-content',
     glare: true,
+    "full-page-listening": false,
     "max-glare": 1,
+    gyroscope: true,
   };
 
   constructor() { }
