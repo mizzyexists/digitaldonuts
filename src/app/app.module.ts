@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,18 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AngularTiltModule
+    AngularTiltModule,
+    HotToastModule.forRoot(
+         {
+           position: 'top-center',
+           dismissible: true,
+           duration: 5000,
+           theme:'snackbar',
+           style: {
+             textAlign: 'center'
+           }
+         }
+       )
   ],
   providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

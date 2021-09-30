@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HotToastService } from '@ngneat/hot-toast';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,9 @@ export class NavbarComponent implements OnInit {
   menuOpened: any = false;
   menuClass: any = 'collapsed';
 
-  constructor() { }
+  constructor(
+    private toastService: HotToastService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +26,10 @@ export class NavbarComponent implements OnInit {
       this.menuOpened = false;
       this.menuClass = "collapsed";
     }
+  }
+
+  walletConnect(){
+    this.toastService.error("Sorry!<br/>We can't connect to wallets just yet!<br/>Come back soon and try again.");
   }
 
 }

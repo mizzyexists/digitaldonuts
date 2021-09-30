@@ -1,4 +1,19 @@
-
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #000000e0;
+  &.not-collapsed{
+    transform: translateX(0%);
+    transition: transform .5s ease;
+  }
+  &.collapsed{
+    transform: translateX(100%);
+    transition: transform .5s ease;
+  }
+}
 .navigation{
   display: flex;
   justify-content: space-between;
@@ -7,10 +22,13 @@
   .nav-logo{
     width: 140px;
     transform: scale(1.0);
-    transition: transform .3s ease;
+    transition: all .3s ease;
+    filter: drop-shadow(0px 0px 9px #00000050);
     &:hover{
       transform: scale(1.2);
-      transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      filter: drop-shadow(0px 0px 9px #000000);
+
     }
   }
   .nav-toggle{
@@ -18,6 +36,8 @@
     padding: 30px;
     transform: scale(1.0);
     transition: all .3s ease;
+    filter: drop-shadow(0px 0px 9px #00000050);
+    cursor: pointer;
     img{
       max-width: 100%;
       position: relative;
@@ -26,6 +46,7 @@
     &:hover, &.not-collapsed{
       transform: scale(1.4);
       transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      filter: drop-shadow(0px 0px 9px #000000);
       .menu-label{
         top: 98px;
         opacity: 1;
@@ -71,25 +92,26 @@
           align-items: center;
           text-decoration: none;
           justify-content: flex-end;
+          cursor: pointer;
           &:hover{
             img{
-              width: 70px;
+              width: 80px;
               transition: all .3s ease;
             }
             p{
-              font-size: 28px;
+              font-size: 38px;
               transition: all .3s ease;
             }
           }
           img{
-            width: 50px;
+            width: 65px;
             transition: all .3s ease;
           }
           p{
             padding-bottom: 0px;
             margin-bottom: 0px;
             padding-right: 10px;
-            font-size: 20px;
+            font-size: 30px;
             transition: all .3s ease;
           }
         }

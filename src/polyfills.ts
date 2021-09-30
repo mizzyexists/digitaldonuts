@@ -1,6 +1,8 @@
 /***************************************************************************************************
  * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
  */
+
+var require: any;
 import '@angular/localize/init';
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
@@ -17,6 +19,17 @@ import '@angular/localize/init';
  *
  * Learn more in https://angular.io/guide/browser-support
  */
+
+ // import { Buffer } from 'buffer';
+ //
+ // (window as any).global = window;
+ // global.Buffer = Buffer;
+ // global.process = {
+ //     env: { DEBUG: undefined },
+ //     version: '',
+ //     nextTick: require('next-tick')
+ // } as any;
+
 
 /***************************************************************************************************
  * BROWSER POLYFILLS
@@ -60,6 +73,7 @@ import '@angular/localize/init';
  * Zone JS is required by default for Angular itself.
  */
 import 'zone.js/dist/zone';  // Included with Angular CLI.
+import { global } from '@angular/compiler/src/util';
 
 
 /***************************************************************************************************
