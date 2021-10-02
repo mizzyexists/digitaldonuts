@@ -1,8 +1,7 @@
 /***************************************************************************************************
  * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
  */
-
-var require: any;
+declare var require: any;
 import '@angular/localize/init';
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
@@ -20,15 +19,14 @@ import '@angular/localize/init';
  * Learn more in https://angular.io/guide/browser-support
  */
 
- // import { Buffer } from 'buffer';
- //
- // (window as any).global = window;
- // global.Buffer = Buffer;
- // global.process = {
- //     env: { DEBUG: undefined },
- //     version: '',
- //     nextTick: require('next-tick')
- // } as any;
+ (window as any).global = window;
+ import { Buffer } from 'buffer';
+ global.Buffer = Buffer;
+ global.process = {
+    env: { DEBUG: undefined },
+    version: '',
+    nextTick: require('next-tick')
+    } as any;
 
 
 /***************************************************************************************************
