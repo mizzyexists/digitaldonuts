@@ -63,10 +63,10 @@
     position: relative;
     text-align: center;
     width: 100%;
-    padding-top: 0px;
+    transform: translateY(0px);
     transition: all .3s ease;
     &:hover{
-      padding-top: 20px;
+      transform: translateY(20px);
       transition: all .3s ease;
     }
   }
