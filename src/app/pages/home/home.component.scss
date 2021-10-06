@@ -42,8 +42,8 @@
   background-repeat: no-repeat;
   video{
     height: 100%;
-    filter: brightness(0.2);
-    transform: scale(1.1);
+    -webkit-filter: brightness(0.2);
+    -webkit-transform: scale(1.1);
     position: fixed;
     top: 0;
     width: 100%;
@@ -68,10 +68,10 @@
     position: relative;
     text-align: center;
     width: 100%;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
     transition: all .3s ease;
     &:hover{
-      transform: translateY(20px);
+      -webkit-transform: translateY(20px);
       transition: all .3s ease;
     }
   }
@@ -113,5 +113,137 @@
   }
   p{
     font-size: 26px;
+  }
+}
+
+.sideways-wire{
+  max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  -webkit-filter: drop-shadow(1px -9px 3px #00000070);
+  &:nth-of-type(odd){
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+#roadmap{
+  padding-top: 50px;
+  background: linear-gradient(180deg,#a0c4ff 0%,#7764fd 96%);
+  width: 100%;
+  h3{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    margin: 30px;
+    -webkit-filter: drop-shadow(1px 4px 3px #00000070);
+  }
+  .timeline {
+    margin-top: 50px !important;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  .holder {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    &:hover{
+      &::after{
+        -webkit-transform: scale(1.5);
+        transition: all .3s ease;
+      }
+    }
+  }
+  .holder::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: -30px;
+    top: 13px;
+    border-radius: 50%;
+    z-index: 1;
+    -webkit-transform: scale(1.0);
+    transition: all .3s ease;
+    background-image: url("/../assets/images/PinkOHTrans.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .left {
+    left: 0; 
+  }
+  .right {
+    left: 50%;
+  }
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 30px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #0000007a;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #0000007a;
+  }
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 30px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #0000007a;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #0000007a transparent transparent;
+  }
+  .right::after {
+    left: -30px;
+    background-image: url('/../assets/images/ChocolateOHTrans.png');
+  }
+  .content {
+    padding: 20px 30px;
+    background-color: #0000007a;
+    position: relative;
+    border-radius: 6px;
+    color: #fff;
+  }
+  @media screen and (max-width: 600px) {
+    .timeline::after {
+      left: 31px;
+    }
+    .holder {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+    .holder::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+    .left::after, .right::after {
+      left: 0px;
+    }
+    .right {
+      left: 0%;
+    }
   }
 }

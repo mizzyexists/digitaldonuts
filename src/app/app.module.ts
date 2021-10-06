@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { AngularTiltModule } from 'angular-tilt';
-
+import { NgwWowModule } from 'ngx-wow';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,6 +20,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     AppRoutingModule,
     NgbModule,
     AngularTiltModule,
+    NgwWowModule,
     HotToastModule.forRoot(
          {
            position: 'top-center',
@@ -33,7 +34,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
        )
   ],
   providers: [],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  schemas: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
