@@ -24,6 +24,6 @@ deploy:
     - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_ed25519
     - chmod 600 ~/.ssh/id_ed25519
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - /usr/bin/rsync -ravO dist/DigitalDonutsApp/ root@captain.appserver.mizzyexists.com:/var/lib/docker/volumes/captain--digitaldonuts-webroot/_data/
+    - /usr/bin/rsync -ravO dist/DDTRUFFLEWEB3/ root@captain.appserver.mizzyexists.com:/var/lib/docker/volumes/captain--digitaldonuts-webroot/_data/
   only:
     - master
