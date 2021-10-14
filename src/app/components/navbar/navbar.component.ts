@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HotToastService } from '@ngneat/hot-toast';
+import { Web3Service } from 'src/app/services/web3.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,12 @@ import { HotToastService } from '@ngneat/hot-toast';
 export class NavbarComponent implements OnInit {
   menuOpened: any = false;
   menuClass: any = 'collapsed';
-
+  walletButton: any = "Connect Wallet";
+  ethAccount: any;
+  
   constructor(
-    private toastService: HotToastService
+    private toastService: HotToastService,
+    private web3Service: Web3Service
   ) { }
 
   ngOnInit(): void {
@@ -28,8 +32,11 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  walletConnect(){
-    this.toastService.error("Sorry!<br/>We can't connect to wallets just yet!<br/>Come back soon and try again.");
+  async connectWallet(){
+    (await this.web3Service.initializeWeb3()).subscribe((res:any) => {
+      this.ethAccount = res;
+      this.walletButton = "..." + this.ethAccount.substring(35, 42);
+    });
   }
 
 }

@@ -1,40 +1,37 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularTiltModule } from 'angular-tilt';
-import { NgwWowModule } from 'ngx-wow';
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoaderComponent } from './components/loader/loader.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     NavbarComponent,
-    HomeComponent
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
-    AngularTiltModule,
-    NgwWowModule,
     HotToastModule.forRoot(
-         {
-           position: 'top-center',
-           dismissible: true,
-           duration: 5000,
-           theme:'snackbar',
-           style: {
-             textAlign: 'center'
-           }
+       {
+         position: 'top-center',
+         dismissible: true,
+         duration: 5000,
+         theme:'snackbar',
+         style: {
+           textAlign: 'center'
          }
-       )
+       }
+     )
   ],
   providers: [],
-  schemas: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

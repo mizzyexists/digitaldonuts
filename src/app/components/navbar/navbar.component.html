@@ -5,6 +5,9 @@
       <a class="pl-2" href="/">
         <img class="nav-logo" src="../assets/images/DD_V1.png">
       </a>
+      <a class="wallet-connect" (click)="connectWallet()">
+        <p>Connect Wallet</p>
+      </a>
       <a class="nav-toggle {{menuClass}}" (click)="toggleMenu()">
         <img src="../assets/images/PinkDonutItem.png">
         <p class="menu-label">Menu</p>
@@ -33,12 +36,6 @@
             <a href="#" (click)="toggleMenu()">
               <p>Charity</p>
               <img src="../assets/images/SkyOHTrans.png">
-            </a>
-          </li>
-          <li class="nav-item">
-            <a (click)="toggleMenu(); walletConnect();">
-              <p>Connect Wallet</p>
-              <img src="../assets/images/PurpleOHTrans.png">
             </a>
           </li>
         </ul>
