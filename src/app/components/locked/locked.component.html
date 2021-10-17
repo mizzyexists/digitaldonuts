@@ -1,0 +1,9 @@
+<div class="locked-container">
+  <div class="logo-container">
+    <img src="../assets/images/DD_V1.png">
+  </div>
+  <div class="password-form">
+    <input [(ngModel)]="accessCode" type="password" name="accessCode" placeholder="Access Code">
+  </div>
+  <a (click)="unlock()" class="btn btn-secondary">Submit</a>
+</div>

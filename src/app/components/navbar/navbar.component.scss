@@ -62,9 +62,8 @@
     .menu-label{
       position: absolute;
       top: 50px;
-      right: 36px;
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 24px;
+      right: 28px;
+      font-size: 19px;
       opacity: 0;
       transition: all .3s ease;
       color: #fff;
@@ -74,14 +73,13 @@
     overflow: hidden;
     display: block;
     position: absolute;
-    right: 50px;
+    right: 12px;
     top: 170px;
       ul{
         list-style: none;
       }
     .nav-item{
       p{
-        font-family: 'Josefin Sans', sans-serif;
         font-size: 20px;
         color: #fff;
       }
@@ -104,7 +102,7 @@
               transition: all .3s ease;
             }
             p{
-              font-size: 38px;
+              font-size: 32px;
               transition: all .3s ease;
             }
           }
@@ -116,7 +114,7 @@
             padding-bottom: 0px;
             margin-bottom: 0px;
             padding-right: 10px;
-            font-size: 30px;
+            font-size: 28px;
             transition: all .3s ease;
           }
         }

@@ -1,4 +1,4 @@
-<div *ngIf="loading==false" id="main">
+<div *ngIf="loading==false && locked==false" id="main">
   <div id="main-header">
     <app-navbar></app-navbar>
   </div>
@@ -10,4 +10,7 @@
 </div>
 <div *ngIf="loading==true" id="loader">
   <app-loader></app-loader>
+</div>
+<div *ngIf="loading==false && locked==true" id="protected">
+  <app-locked></app-locked>
 </div>

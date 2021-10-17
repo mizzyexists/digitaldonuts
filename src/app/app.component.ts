@@ -21,11 +21,20 @@ export class AppComponent implements OnInit{
   tokenId: any;
   tokenCount: any;
   ownedTokens: any;
+  locked: any = true;
+  checkLocked: any;
   contractAddress = "0x7Cb579674D7C135490eDBA44c109227F77c45653";
   constructor(private web3Service: Web3Service){
   }
 
   ngOnInit(){
+    this.checkLocked = window.localStorage.getItem("unlocked");
+    if(this.checkLocked == 'true'){
+      this.locked = false;
+    }
+    else{
+      this.locked = true;
+    }
     const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
     const donutContract = new web3.eth.Contract(this.abiData, this.contractAddress);
     // donutContract.methods.totalToken().call().then((res: any) => {
@@ -40,18 +49,11 @@ export class AppComponent implements OnInit{
     this.hasLoaded = window.localStorage.getItem("hasLoaded");
     if(!this.hasLoaded || this.hasLoaded == 'false'){
       setTimeout(() =>{ this.loading = false }, 9000);
-      // window.localStorage.setItem('hasLoaded', 'true');
+      window.localStorage.setItem('hasLoaded', 'true');
     }
     else{
       this.loading = false;
     }
-  }
-
-  async connectWallet(){
-    (await this.web3Service.initializeWeb3()).subscribe((res:any) => {
-      this.ethAccount = res;
-      this.walletButton = "..." + this.ethAccount.substring(35, 42);
-    });
   }
 
   async mintDonut(){
