@@ -8,9 +8,9 @@
   <div id="footer">
   </div>
 </div>
-<div *ngIf="loading==true" id="loader">
+<div *ngIf="loading==true && locked==false" id="loader">
   <app-loader></app-loader>
 </div>
-<div *ngIf="loading==false && locked==true" id="protected">
+<div *ngIf="locked==true" id="protected">
   <app-locked></app-locked>
 </div>

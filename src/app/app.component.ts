@@ -48,8 +48,9 @@ export class AppComponent implements OnInit{
     // });
     this.hasLoaded = window.localStorage.getItem("hasLoaded");
     if(!this.hasLoaded || this.hasLoaded == 'false'){
-      setTimeout(() =>{ this.loading = false }, 9000);
-      window.localStorage.setItem('hasLoaded', 'true');
+      this.loading = true;
+      // setTimeout(() =>{ this.loading = false }, 9000);
+      // window.localStorage.setItem('hasLoaded', 'true');
     }
     else{
       this.loading = false;
