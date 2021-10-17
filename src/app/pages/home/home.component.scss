@@ -1,3 +1,7 @@
+p{
+  font-family: "Josefin Sans", sans-serif;
+}
+
 #big-logo-container{
   height: 100vh;
   display: flex;
@@ -43,8 +47,9 @@
   }
 }
 
-#section-1{
+#about-us{
   padding: 50px;
+  min-height: 100vh;
   z-index: 10;
   position: relative;
   width: 100%;
@@ -53,7 +58,6 @@
   display: flex;
   align-items: center;
   #donutCarousel{
-    margin-bottom: -30px;
     .carousel-item{
       &.active{
         &.carousel-item-start{
@@ -67,6 +71,7 @@
     width: 100%;
     img{
       max-width: 65%;
+      margin-top: 80px;
     }
   }
   h1{
@@ -74,24 +79,33 @@
     font-size: 36px;
   }
   p{
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
 .sideways-wire{
   max-width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
   padding: 20px;
+  margin-bottom: 50px !important;
   -webkit-filter: drop-shadow(1px -9px 3px #00000070);
+  margin: auto auto;
+  display: block;
 }
 
-#section-2{
+#why-dd{
+  padding: 50px;
   background: linear-gradient(180deg, rgba(255,159,196,1) 35%, rgba(0,146,231,1) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   .donut-img{
-    width: 400px;
+    width: 50%;
     margin: auto;
     display: block;
+    margin-top: 30px;
+  }
+  p{
+    font-size: 28px;
   }
 }
 
@@ -193,6 +207,7 @@
     border-radius: 6px;
     h2, p{
       color: #fff;
+      font-family: "Josefin Sans", sans-serif;
     }
   }
   @media screen and (max-width: 600px) {
