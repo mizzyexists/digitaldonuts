@@ -1,5 +1,13 @@
 p{
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Chewy", sans-serif;
+}
+
+h3{
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  -webkit-filter: drop-shadow(1px 4px 3px #00000070);
 }
 
 #big-logo-container{
@@ -14,8 +22,9 @@ p{
   background-position: center;
   background-repeat: no-repeat;
   .logo-image-container{
-    max-width: 600px;
+    max-width: 650px;
     margin-top: 60px;
+    padding: 50px;
     .logo-img{
       width: 100%;
       z-index: 3;
@@ -87,6 +96,9 @@ p{
   p{
     font-size: 28px;
   }
+  h3{
+    color: #000;
+  }
 }
 
 #roadmap{
@@ -94,13 +106,6 @@ p{
   width: 100%;
   padding-bottom: 50px;
   background: linear-gradient(180deg, #0040ff 32%, #0092e7 100%);
-  h3{
-    font-weight: bold;
-    font-size: 28px;
-    text-align: center;
-    color: #fff;
-    -webkit-filter: drop-shadow(1px 4px 3px #00000070);
-  }
   .timeline {
     margin-top: 50px !important;
     position: relative;
@@ -123,6 +128,7 @@ p{
     position: relative;
     background-color: inherit;
     width: 50%;
+    z-index: 2;
     &:hover{
       &::after{
         -webkit-transform: scale(1.5);
@@ -187,7 +193,7 @@ p{
     border-radius: 6px;
     h2, p{
       color: #fff;
-      font-family: "Josefin Sans", sans-serif;
+      font-family: "Chewy", sans-serif;
     }
   }
   @media screen and (max-width: 600px) {
@@ -224,7 +230,7 @@ p{
   }
   h4{
     color: #fff;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Chewy", sans-serif;
   }
   p{
     color: #fff;
@@ -237,6 +243,7 @@ p{
   }
   .principle-item {
     display: flex;
+    margin: 20px;
     align-items: center;
     img{
       max-width: 100px;
