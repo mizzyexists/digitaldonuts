@@ -9,6 +9,8 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { LockedComponent } from './components/locked/locked.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CoreArtistsComponent } from './pages/core-artists/core-artists.component';
+import { CharityComponent } from './pages/charity/charity.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
     LoaderComponent,
     LockedComponent,
     FooterComponent,
+    CoreArtistsComponent,
+    CharityComponent,
   ],
   imports: [
     BrowserModule,
