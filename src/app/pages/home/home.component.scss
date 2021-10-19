@@ -10,13 +10,27 @@ h3{
   -webkit-filter: drop-shadow(1px 4px 3px #00000070);
 }
 
-#big-logo-container{
+.dd-section{
+  padding: 50px;
+  width: 100%;
+}
+
+.sideways-wire{
+  max-width: 100%;
+  padding: 20px;
+  margin-bottom: 50px !important;
+  -webkit-filter: drop-shadow(1px -9px 3px #00000070);
+  margin: auto auto;
+  display: block;
+}
+
+#home-section-container{
   height: 100vh;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background-color: #000;
-  overflow: clip;
   background-image: url("/assets/images/HomeBG1.png");
   background-size: cover;
   background-position: center;
@@ -46,11 +60,8 @@ h3{
 }
 
 #about-us{
-  padding: 50px;
-  min-height: 100vh;
   z-index: 10;
   position: relative;
-  width: 100%;
   text-align: center;
   background: linear-gradient(180deg, #ff73bb 0%, #ff9fc4 96%);
   display: flex;
@@ -82,9 +93,7 @@ h3{
 }
 
 #why-dd{
-  padding: 50px;
   background: linear-gradient(180deg, rgba(255,159,196,1) 35%, rgba(0,146,231,1) 100%);
-  min-height: 100vh;
   display: flex;
   align-items: center;
   .donut-img{
@@ -101,10 +110,39 @@ h3{
   }
 }
 
+#core-principles{
+  background: linear-gradient(180deg, #0092e7 32%, #0040ff 100%);
+  h3{
+    color: #fff;
+  }
+  h4{
+    color: #fff;
+    font-family: "Chewy", sans-serif;
+  }
+  p{
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 0px;
+  }
+  .principles-list{
+    margin-top: 80px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .principle-item {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    img{
+      max-width: 100px;
+      margin-right: 20px;
+    }
+  }
+}
+
 #roadmap{
-  padding-top: 50px;
-  width: 100%;
-  padding-bottom: 50px;
   background: linear-gradient(180deg, #0040ff 32%, #0092e7 100%);
   .timeline {
     margin-top: 50px !important;
@@ -220,43 +258,70 @@ h3{
   }
 }
 
-#core-principles{
-  background: linear-gradient(180deg, #0092e7 32%, #0040ff 100%);
+#head-chefs{
   min-height: 100vh;
-  padding: 50px;
-  padding-bottom: 100px;
-  h3{
-    color: #fff;
-  }
-  h4{
-    color: #fff;
-    font-family: "Chewy", sans-serif;
-  }
-  p{
-    color: #fff;
-    font-size: 26px;
-    margin-bottom: 0px;
-  }
-  .principles-list{
-    margin-top: 80px;
-    padding-left: 5%;
-  }
-  .principle-item {
-    display: flex;
-    margin: 20px;
-    align-items: center;
-    img{
-      max-width: 100px;
-      margin-right: 20px;
+  background-color: #fff;
+  .chefs-heading{
+    border-bottom: 3px solid #ffe245;
+    padding: 30px;
+    .tiny-logo{
+      width: 100px;
+      margin: auto;
+      display: block;
+    }
+    h3{
+      color: #24aeff;
     }
   }
-}
-
-.sideways-wire{
-  max-width: 100%;
-  padding: 20px;
-  margin-bottom: 50px !important;
-  -webkit-filter: drop-shadow(1px -9px 3px #00000070);
-  margin: auto auto;
-  display: block;
+  .chef-profile{
+    padding: 10px;
+    .chef-profile-head{
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 3px solid;
+      padding-bottom: 10px;
+      .chef-profile-donut{
+        width: 200px;
+        &.desat{
+          -webkit-filter: saturate(0.85);
+        }
+      }
+      hr{
+        width: 90%;
+      }
+      h5{
+        font-size: 16px;
+      }
+      &.tommy{
+        h5, p{
+          color: #de54cb;
+        }
+        color: #de54cb;
+      }
+      &.andrew{
+        h5, p{
+          color: #32bed6;
+        }
+        color: #32bed6;
+      }
+      &.joe{
+        h5, p{
+          color: #e3de4e;
+        }
+        color: #e3de4e;
+      }
+    }
+    .chef-profile-details{
+      padding-top: 10px;
+      ul{
+        li{
+          font-family: "Chewy", sans-serif;
+          line-height: 2;
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
