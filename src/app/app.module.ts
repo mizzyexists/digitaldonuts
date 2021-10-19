@@ -11,6 +11,7 @@ import { LockedComponent } from './components/locked/locked.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CoreArtistsComponent } from './pages/core-artists/core-artists.component';
 import { CharityComponent } from './pages/charity/charity.component';
+import { LoreComponent } from './pages/lore/lore.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { CharityComponent } from './pages/charity/charity.component';
     FooterComponent,
     CoreArtistsComponent,
     CharityComponent,
+    LoreComponent,
   ],
   imports: [
     BrowserModule,
