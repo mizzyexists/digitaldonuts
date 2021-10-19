@@ -20,3 +20,22 @@
     font-size: 20px;
   }
 }
+.sideways-wire{
+  max-width: 100%;
+  padding: 20px;
+  -webkit-filter: drop-shadow(1px -9px 3px #00000070);
+  margin: auto auto;
+  display: block;
+}
+
+.amount{
+  color: green;
+  font-size: 20px;
+  font-family: 'Chewy', sans-serif;
+}
+
+.accent{
+  color: #0072ff;
+  font-size: 20px;
+  font-family: 'Chewy', sans-serif;
+}

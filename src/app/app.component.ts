@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
   tokenId: any;
   tokenCount: any;
   ownedTokens: any;
-  locked: any = true;
+  locked: any = false;
   checkLocked: any;
   contractAddress = "0x7Cb579674D7C135490eDBA44c109227F77c45653";
   constructor(private web3Service: Web3Service){
