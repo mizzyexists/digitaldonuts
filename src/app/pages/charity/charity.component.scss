@@ -6,3 +6,17 @@
   background-size: cover;
   box-shadow: inset 0px 0px 1000px 1000px #0000004d;
 }
+#charity{
+  padding: 50px;
+  background: linear-gradient(180deg, rgba(255,127,233,1) 0%, rgba(101,187,255,1) 100%);
+  .heading{
+    text-align: center;
+    h1{
+      margin-bottom: 30px;
+    }
+  }
+  p{
+    font-family: 'Chewy', sans-serif;
+    font-size: 20px;
+  }
+}

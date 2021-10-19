@@ -10,6 +10,13 @@
   background: linear-gradient(180deg, rgba(255,127,233,1) 0%, rgba(101,187,255,1) 100%);
   .heading{
     text-align: center;
+    h1{
+      margin-bottom: 30px;
+    }
+  }
+  p{
+    font-family: 'Chewy', sans-serif;
+    font-size: 20px;
   }
   .artist{
     justify-content: center;
@@ -22,6 +29,7 @@
     }
     p{
       text-align: center;
+      font-family: 'Chewy', sans-serif;
     }
   }
 }
