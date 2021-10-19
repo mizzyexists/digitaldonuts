@@ -33,7 +33,7 @@ export class AppComponent implements OnInit{
       this.locked = false;
     }
     else{
-      this.locked = true;
+      this.locked = false;
     }
     const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
     const donutContract = new web3.eth.Contract(this.abiData, this.contractAddress);
