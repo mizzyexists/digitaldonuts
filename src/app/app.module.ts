@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { LockedComponent } from './components/locked/locked.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { LockedComponent } from './components/locked/locked.component';
     NavbarComponent,
     LoaderComponent,
     LockedComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
