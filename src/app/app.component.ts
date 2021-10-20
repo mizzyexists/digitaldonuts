@@ -14,16 +14,16 @@ export class AppComponent implements OnInit{
   hasLoaded: any;
   walletButton: any = "Connect Wallet";
   ethAccount: any;
-  abi: any = Abi;
-  abiData = this.abi.abiData;
+  abi: any;
+  abiData: any;
   timestamp: any;
-  mintFee: any = 6000000000 * 10000000;
+  mintFee: any;
   tokenId: any;
   tokenCount: any;
   ownedTokens: any;
   locked: any = false;
   checkLocked: any;
-  contractAddress = "0x7Cb579674D7C135490eDBA44c109227F77c45653";
+  contractAddress = "";
   constructor(private web3Service: Web3Service){
   }
 
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit{
       this.locked = false;
     }
     const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
-    const donutContract = new web3.eth.Contract(this.abiData, this.contractAddress);
+    // const donutContract = new web3.eth.Contract(this.abiData, this.contractAddress);
     // donutContract.methods.totalToken().call().then((res: any) => {
     //   this.tokenId = [res];
     //   this.tokenCount = this.tokenId[0];
