@@ -284,7 +284,7 @@ h3{
       border-bottom: 3px solid;
       padding-bottom: 10px;
       .chef-profile-donut{
-        width: 200px;
+        max-width: 100%;
         &.desat{
           -webkit-filter: saturate(0.85);
         }
